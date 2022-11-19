@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+  <title>Register Form</title>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <form name=f1 onsubmit = "return validation()" method = "POST">  
+    <div id = "frm">  
+        <h1> Registeration..</h1>
+ <form>
+  <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" id="user"></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" id="pass"></td>
+   </tr>
+   <tr>
+    <td>Gender :</td>
+    <td>
+     <input type="radio" name="Gender"> Male
+     <input type="radio" name="Gender"> Female
+    </td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email"></td>
+   </tr>
+   <tr>
+    <td>Phone no :</td>
+    <td>
+     <select>
+      <option>977</option>
+      <option>978</option>
+      <option>979</option>
+      <option>973</option>
+      <option>972</option>
+      <option>974</option>
+     </select>
+     <input type="phone">
+    </td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+ </form>
+    </div>
+    <script>  
+        function validation()  
+        {  
+            var id=document.f1.user.value;  
+            var ps=document.f1.pass.value;  
+            if(id.length=="" && ps.length=="") {  
+                alert("User Name and Password fields are empty");  
+                return false;  
+            }  
+            else  
+            {  
+                if(id.length=="") {  
+                    alert("User Name is empty");  
+                    return false;  
+                }   
+                if (ps.length=="") {  
+                alert("Password field is empty");  
+                return false;  
+                }  
+            }                             
+        }  
+    </script>  
+</body>
+</html>
